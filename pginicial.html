@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <!-- Link para o Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEJZpq6MCHfTp+8h1bHgO7h4Zp1hyNKJ8uOXxRfttHmsl3bXQk1RczxM6Kl7L" crossorigin="anonymous">
+    <style>
+        /* Estilo para a tela inicial */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            /* Necessário para o pseudo-elemento */
+            overflow: hidden;
+            /* Evita barras de rolagem */
+        }
+
+        /* Pseudo-elemento para o fundo desfocado */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/nfs/homes/bacamarg/missao_42/rush/fundo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(5px);
+            /* Efeito de desfoque */
+            z-index: -1;
+            /* Coloca o pseudo-elemento atrás do conteúdo */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            align-items: center;
+        }
+
+        /* Estilo para as imagens circulares */
+        .image-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ffffff;
+            box-shadow: 0 0 15px rgba(177, 83, 114, 0.6); /* Sombras em rosa */
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efeito ao passar o mouse sobre as imagens */
+        .image-circle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(177, 83, 114, 0.8); /* Sombras em rosa ao passar o mouse */
+        }
+
+        /* Estilo para o título */
+        .title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(177, 83, 114, 0.6); /* Sombras em rosa no título */
+        }
+
+        /* Estilo para o subtítulo */
+        .sub-title {
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            color: #ffffff; /* Subtítulo em branco */
+            text-shadow: 0 0 10px rgba(177, 83, 114, 0.6); /* Sombras em rosa no subtítulo */
+        }
+
+        /* Estilo para a linha de separação entre as imagens */
+        .separator {
+            width: 20px;
+            height: 150px;
+            background-color: #343a4000;
+            margin: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title">Bem-vindo</h1>
+        <p class="sub-title">Para continuar, selecione o currículo desejado</p>
+
+        <div class="image-container">
+            <!-- Imagem 1 com link (abrir em nova página) -->
+            <a href="/nfs/homes/bacamarg/missao_42/rush/babi.html" target="_blank">
+                <img src="/nfs/homes/bacamarg/missao_42/rush/b1.jpeg" alt="Sua Foto" class="image-circle">
+            </a>
+
+            <!-- Linha de separação -->
+            <div class="separator"></div>
+
+            <!-- Imagem 2 com link (abrir em nova página) -->
+            <a href="/nfs/homes/bacamarg/missao_42/rush/mica.html" target="_blank">
+                <img src="https://media.licdn.com/dms/image/D4D03AQHo4H8HAhLFiQ/profile-displayphoto-shrink_400_400/0/1705456702107?e=2147483647&v=beta&t=p057k5orSGwwGJ9rL1S3A54oyQqtTDVYOugyU7YMThI"
+                    alt="Sua Foto" class="image-circle">
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gybF2mdFvcz3f2b0pK3P1r32+PqZuCZSmKbRAB/pzX30X6f9d3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIq0p3eFWpCzmxD4wOa79ePHEMZx5jwbWm0y9jN7N1rZVsqP0Qe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
